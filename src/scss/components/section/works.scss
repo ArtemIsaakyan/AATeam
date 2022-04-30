@@ -1,0 +1,140 @@
+.works {
+  background-image: url('/img/bg/bg-work-page.png');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  height: 100%;
+  padding: 50px 0;
+
+  &__container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+  }
+
+  &__right {
+    margin: auto 0;
+    background-color: $color-bg-cards;
+    border-radius: 20px;
+    padding: 14px;
+  }
+
+  &__title {
+    margin: auto 0;
+  }
+
+  &__section {
+    color: $basic-white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+  }
+
+  &__nav {
+    padding-bottom: 72px;
+  }
+
+  &__nav__link {
+    position: relative;
+  }
+
+  &__nav__link::before {
+    content: '';
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 0%;
+    height: 2.2px;
+    background-color: $basic-white;
+    transition: 0.2s;
+  }
+  &__nav__link:hover:before {
+    width: 100%;
+    left: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__cards {
+    border-radius: 20px;
+    padding: 0 14px 0 0;
+    display: grid;
+    grid-gap: 14px;
+    overflow: scroll; 
+    width: 810px; 
+    height: 800px;
+    overflow-x:hidden;
+    grid-template-columns: auto auto;
+  }
+
+  &__cards::-webkit-scrollbar {
+    width: 16px;
+    border-radius: 26px;
+    
+  }
+  
+  &__cards::-webkit-scrollbar-thumb {
+    border-radius: 60px;
+    box-shadow: inset 0 0 10px 10px $color-bg-skroll;
+    border: solid 4px transparent;
+  }
+  
+  &__cards::-webkit-scrollbar-track {
+    border-radius: 26px;
+    background-color: $color-bg-card;
+    box-shadow: inset 0 0 10px 10px $color-bg-card;
+    border: solid 3px transparent;
+  }
+
+
+  &__card {
+    background-color: $color-bg-card;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    height: 373px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $text-color-black;
+  }
+}

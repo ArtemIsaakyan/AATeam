@@ -1,0 +1,217 @@
+.contacts {
+  background-image: url('/img/bg/bg-contacts-page.png');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  height: 100%;
+
+  &__container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+  }
+
+  &__title {
+    margin: auto 0;
+  }
+
+  &__section {
+    color: $basic-white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+  }
+
+  &__nav {
+    padding-bottom: 72px;
+  }
+
+  &__nav__link {
+    position: relative;
+  }
+
+  &__nav__link::before {
+    content: '';
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 0%;
+    height: 2.2px;
+    background-color: $basic-white;
+    transition: 0.2s;
+  }
+  &__nav__link:hover:before {
+    width: 100%;
+    left: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  // &__whatsapp, &__facebook, &__telegram, 
+  // &__vk, &__instagram {
+  //   position: absolute;
+  // }
+
+  &__link {
+
+    &-whatsapp {
+      position: absolute;
+      left: 0;
+      top: 180px;
+    }
+
+    &-vk {
+      position: absolute;
+      left: 10px;
+      top: 700px;
+    }
+
+    &-facebook {
+      position: absolute;
+      left: 300px;
+      top: 300px;
+    }
+
+    &-instagram {
+      position: absolute;
+      left: 600px;
+      top: 650px;
+    }
+
+    &-telegram {
+      position: absolute;
+      left:600px;
+      top: 70px;
+    }
+  }
+
+
+  &__label {
+    
+    &-whatsapp {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      background-color: $color-label-whatsapp;
+      padding: 5px 20px;
+      border-radius: 10px;
+      position: absolute;
+      top: -60px;
+      left: 70px;
+      transition: all .2s ease-in-out;
+      opacity: 0;
+    }
+
+    &-vk {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      background-color: $color-label-vk;
+      padding: 5px 20px;
+      width: 180px;
+      border-radius: 10px;
+      top: -60px;
+      left: 100px;
+      transition: all .2s ease-in-out;
+      opacity: 0;
+    }
+
+    &-facebook {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      background-color: $color-label-facebook;
+      padding: 5px 20px;
+      width: 180px;
+      border-radius: 10px;
+      left: 300px;
+      top: 100px;
+      transition: all .2s ease-in-out;
+      opacity: 0;
+    }
+
+    &-instagram {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      background-color: $color-label-instagram;
+      padding: 5px 20px;
+      border-radius: 10px;
+      left: 70px;
+      top: -60px;
+      transition: all .2s ease-in-out;
+      opacity: 0;
+    }
+
+    &-telegram {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      background-color: $color-label-telegram;
+      padding: 5px 20px;
+      border-radius: 10px;
+      top: -60px;
+      left: 100px;
+      transition: all .2s ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  &__link {
+    &-whatsapp:hover {
+      .contacts__label-whatsapp {
+        opacity: 1;
+      }
+    }
+    &-facebook:hover {
+      .contacts__label-facebook {
+        opacity: 1;
+      }
+    }
+    &-telegram:hover {
+      .contacts__label-telegram {
+        opacity: 1;
+      }
+    }
+    &-vk:hover {
+      .contacts__label-vk {
+        opacity: 1;
+      }
+    }
+    &-instagram:hover {
+      .contacts__label-instagram {
+        opacity: 1;
+      }
+    }
+  }
+}
