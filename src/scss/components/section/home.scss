@@ -41,6 +41,15 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    @include sm-md {
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
   }
 
   &__item {
@@ -48,6 +57,15 @@
     font-weight: 300;
     font-size: 40px;
     margin-right: 60px;
+    @media screen and (max-width: 1280px) {
+      font-size: 25px;
+    }
+    @include sm-md {
+      margin-right: 0;
+    }
+    @media screen and (max-width: 480px) {
+      margin-top: 20px;
+    }
   }
 
   &__item:last-child {
@@ -60,7 +78,6 @@
   }
 
   &__moto {
-    font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

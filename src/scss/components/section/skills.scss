@@ -3,15 +3,21 @@
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
-  height: 100%;
+  height: 900px;
+  padding-top: 50px;
 
   &__container {
     display: flex;
     height: 100%;
     justify-content: space-between;
+    @media screen and (max-width: 1280px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__left {
+    width: 100%;
+    height: 100%;
     position: relative;
   }
 
@@ -31,10 +37,16 @@
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
+    @media screen and (max-width: 1280px) {
+      font-size: 45px;
+    } 
   }
 
   &__nav {
     padding-bottom: 72px;
+    @media screen and (max-width: 1280px) {
+      padding-bottom: 0px;
+    }
   }
 
   &__nav__link {
@@ -60,6 +72,13 @@
     list-style: none;
     padding: 0;
     display: flex;
+    @media screen and (max-width: 1280px) {
+      justify-content: center;
+    }
+    @media screen and (max-width: 570px) {
+      justify-content: center;
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -67,6 +86,14 @@
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
+    @media screen and (max-width: 1280px) {
+      font-size: 25px;
+    }
+    @media screen and (max-width: 570px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    
   }
 
   &__item:last-child {
@@ -79,70 +106,208 @@
   }
 
   &__sass {
-    top: 700px;
+    top: 74%;
     left: 0;
     animation: 
       sass 9s linear infinite;
+      @media screen and (max-width: 1280px) {
+        top: 63%;
+        left: 3%;
+        width: 191px;
+      }
+      @media screen and (max-width: 800px) {
+        width: 120px;
+      }
+      @media screen and (max-width: 570px) {
+        top: 69%;
+      }
+
   }
 
   &__css {
-    top: 50px;
+    left: 0%;
+    top: 10%;
     animation: 
     css 9s linear infinite;
+    @media screen and (max-width: 1280px) {
+      left: 8%;
+      top: 10%;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 117px;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 90px;
+      top: 4%;
+      left: 7%;
+    }
   }
 
   &__es6 {
-    top: 320px;
+    left: 1%;
+    top: 38%;
     animation: 
     es6 8s linear infinite;
+    @media screen and (max-width: 1280px) {
+      left: 7%;
+      top: 42%;
+    }
+    @media screen and (max-width: 800px) {
+      width: 100px;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 80px;
+      top: 45%;
+      left: 10%;
+    }
   }
 
   &__design {
-    top: 500px;
+    top: 61%;
+    left: 0.2%;
     animation: 
     design 6s linear infinite;
+
+    @media screen and (max-width: 1280px) {
+      top: 62%;
+      left: 22%;
+      width: 322px
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 280px;
+      top: 54%;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 220px;
+      top: 60%;
+      left: 25%;
+    }
   }
 
   &__ideas {
-    left: 300px;
-    top: 90px;
+    left: 26%;
+    top: 11%;
     animation: 
     ideas 7s linear infinite;
+    @media screen and (max-width: 1280px) {
+      left: 31%;
+      top: 12%;
+      width: 122px;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 100px;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 80px;
+      top: 16%;
+    }
   }
 
   &__fresh {
-    left: 350px;
-    top: 290px;
+    left: 28%;
+    top: 32%;
     animation: 
     fresh 9s linear infinite;
+
+    @media screen and (max-width: 800px) {
+      width: 125px;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 90px;
+      top: 26%;
+      left: 22%;
+    }
   }
 
   &__react {
-    left: 450px;
-    top: 500px;
+    left: 49%;
+    top: 46%;
     animation: 
     react 8s linear infinite;
+    @media screen and (max-width: 1280px) {
+      left: 44%;
+      top: 22%;
+    }
+    @media screen and (max-width: 800px) {
+      width: 130px;
+    }
+    @media screen and (max-width: 570px) {
+      left: 52%;
+    }
+
   }
 
   &__dynamic {
-    left: 339px;
-    top: 711px;
+    left: 35%;
+    top: 69%;
     animation: 
     dynamic 9s linear infinite;
+    @media screen and (max-width: 1280px) {
+      left: 51%;
+      width: 394px;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 342px;
+      left: 37%;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 280px;
+      top: 84%;
+      left: 9%;
+    }
   }
 
   &__html {
-    left: 650px;
-    top: 80px;
+    left: 63%;
+    top: 11%;
     animation: 
     html 8s linear infinite;
+    @media screen and (max-width: 1280px) {
+      left: 60%;
+      top: 0%;
+    }
+    @media screen and (max-width: 800px) {
+      width: 170px;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 120px;
+      left: 60%;
+    }
+
   }
 
   &__wordpress {
-    left: 650px;
-    top: 350px;
+    left: 75%;
+    top: 39%;
     animation: 
     wordpress 7s linear infinite;
+    @media screen and (max-width: 1280px) {
+      left: 79%;
+      top: 37%;
+    }
+
+    @media screen and (max-width: 800px) {
+      left: 60%;
+      top: 42%;
+      width: 120px;
+    }
+
+    @media screen and (max-width: 570px) {
+      width: 100px;
+      left: 58%;
+      top: 44%;
+    }
   }
 
 }
@@ -174,18 +339,17 @@
   0%, 100% {
     transform: translate(0);
   }
-
   20% {
-      transform: translate(-21px,-19px);
+      transform: translate(-16px,-5px);
   }
   40% {
-      transform: translate(-51px,10px);
+      transform: translate(-17px,-26px);
   }
   60% {
-      transform: translate(-37px,-21px);
+      transform: translate(-37px,-15px);
   }
   80% {
-      transform: translate(41px,5px);
+      transform: translate(-4px,-17px);
   }
 }
 
@@ -259,32 +423,35 @@
       transform: translate(-21px,-19px);
   }
   40% {
-      transform: translate(-51px,10px);
+      transform: translate(-21px,10px);
   }
   60% {
-      transform: translate(-37px,-21px);
+      transform: translate(-21px,-19px);
   }
   80% {
-      transform: translate(41px,5px);
+      transform: translate(-21px,10px);
   }
 }
 
 @keyframes react {
   0%, 100% {
-    transform: translate(0);
+    transform: translate(0, 0);
   }
 
   20% {
-      transform: translate(-21px,-19px);
+    transform: translate(15px,5px);
   }
+  
   40% {
-      transform: translate(-51px,10px);
+    transform: translate(24px,-7px);
   }
+
   60% {
-      transform: translate(-37px,-21px);
+    transform: translate(7px,-17px);
   }
+  
   80% {
-      transform: translate(41px,5px);
+    transform: translate(-17px,-12px);
   }
 }
 
@@ -308,20 +475,23 @@
 
 @keyframes html {
   0%, 100% {
-    transform: translate(0);
+    transform: translate(0, 0);
   }
 
   20% {
-      transform: translate(-21px,-19px);
+    transform: translate(15px,5px);
   }
+  
   40% {
-      transform: translate(-51px,10px);
+    transform: translate(24px,-7px);
   }
+
   60% {
-      transform: translate(-37px,-21px);
+    transform: translate(7px,-17px);
   }
+  
   80% {
-      transform: translate(41px,5px);
+    transform: translate(-17px,-12px);
   }
 }
 
